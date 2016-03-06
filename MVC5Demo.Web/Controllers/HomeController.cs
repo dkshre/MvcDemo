@@ -15,7 +15,7 @@ namespace MVC5Demo.Web.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "My test application.";
+            ViewBag.Message = "My test application running.";
 
             return View("About", "_CustomLayout");
         }
