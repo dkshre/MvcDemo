@@ -38,4 +38,17 @@ namespace MVC5Demo.Web.Models
             return new ApplicationDbContext();  
         }
     }
+
+    //ApplicationDbContext and  BookDbContext talk to the same databse usign same connection
+    public class BookDbContext : DbContext
+    {
+        public BookDbContext() :
+            base("DefaultConnection")
+        {
+
+        }
+        //DBSet maps to the table
+        public DbSet<Book> Books { get; set; }
+    }
+
 }

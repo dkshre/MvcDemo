@@ -46,9 +46,9 @@ namespace MVC5Demo.Web
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
             // Uncomment the following lines to enable logging in with third party login providers
-            //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
+            app.UseMicrosoftAccountAuthentication(
+                clientId: "dummyId",
+                clientSecret: "dummySecret");
 
             //app.UseTwitterAuthentication(
             //   consumerKey: "",

@@ -27,9 +27,11 @@ namespace MVC5Demo.Web.Migrations
                 var store = new UserStore<ApplicationUser>(context);
                 var manager = new UserManager<ApplicationUser>(store);
 
-                var user = new ApplicationUser() { Email="jack@yhoo.com", EmailConfirmed=true, UserName = "jack" };
+                var user0 = new ApplicationUser() { Email = "jack@yhoo.com", EmailConfirmed = true, UserName = "jack@yhoo.com" };
+                manager.Create(user0, "Himal@420");
 
-                manager.Create(user, "Himal@420");
+                var user1 = new ApplicationUser() { Email = "dkshre@gmail.com", EmailConfirmed = true, UserName = "dkshre@gmail.com" };
+                manager.Create(user1, "Himal@420");
             }
 
 
