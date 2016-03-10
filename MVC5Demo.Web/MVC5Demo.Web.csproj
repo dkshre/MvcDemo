@@ -159,6 +159,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SecretController.cs" />
@@ -169,10 +170,18 @@
     <Compile Include="MigrationsForBook\201603090422413_InitialCreate.Designer.cs">
       <DependentUpon>201603090422413_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="MigrationsForBook\201603091815180_DefaultSchema.cs" />
+    <Compile Include="MigrationsForBook\201603091815180_DefaultSchema.Designer.cs">
+      <DependentUpon>201603091815180_DefaultSchema.cs</DependentUpon>
+    </Compile>
     <Compile Include="MigrationsForBook\Configuration.cs" />
     <Compile Include="Migrations\201603041624186_InitialCreate.cs" />
     <Compile Include="Migrations\201603041624186_InitialCreate.Designer.cs">
       <DependentUpon>201603041624186_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603091812593_DefaultSchema.cs" />
+    <Compile Include="Migrations\201603091812593_DefaultSchema.Designer.cs">
+      <DependentUpon>201603091812593_DefaultSchema.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -244,6 +253,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_CustomLayout.cshtml" />
+    <Content Include="Views\Book\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -259,8 +269,14 @@
     <EmbeddedResource Include="MigrationsForBook\201603090422413_InitialCreate.resx">
       <DependentUpon>201603090422413_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsForBook\201603091815180_DefaultSchema.resx">
+      <DependentUpon>201603091815180_DefaultSchema.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603041624186_InitialCreate.resx">
       <DependentUpon>201603041624186_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603091812593_DefaultSchema.resx">
+      <DependentUpon>201603091812593_DefaultSchema.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -37,6 +37,12 @@ namespace MVC5Demo.Web.Models
         {
             return new ApplicationDbContext();  
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("identity");
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
     //ApplicationDbContext and  BookDbContext talk to the same databse usign same connection
@@ -49,6 +55,12 @@ namespace MVC5Demo.Web.Models
         }
         //DBSet maps to the table
         public DbSet<Book> Books { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("library");
+            base.OnModelCreating(modelBuilder);
+        }
     }
 
 }
