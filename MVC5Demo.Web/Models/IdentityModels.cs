@@ -63,4 +63,26 @@ namespace MVC5Demo.Web.Models
         }
     }
 
+
+
+    public class EmployeeDbContext : DbContext
+    {
+        public EmployeeDbContext() :
+            base("DefaultConnection")
+        {
+
+        }
+
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.HasDefaultSchema("office");
+            base.OnModelCreating(modelBuilder);
+        }
+
+    }
+
+
 }

@@ -175,6 +175,11 @@
       <DependentUpon>201603091815180_DefaultSchema.cs</DependentUpon>
     </Compile>
     <Compile Include="MigrationsForBook\Configuration.cs" />
+    <Compile Include="MigrationsForEmployee\201603100246131_InitialCreate.cs" />
+    <Compile Include="MigrationsForEmployee\201603100246131_InitialCreate.Designer.cs">
+      <DependentUpon>201603100246131_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MigrationsForEmployee\Configuration.cs" />
     <Compile Include="Migrations\201603041624186_InitialCreate.cs" />
     <Compile Include="Migrations\201603041624186_InitialCreate.Designer.cs">
       <DependentUpon>201603041624186_InitialCreate.cs</DependentUpon>
@@ -186,6 +191,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -271,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MigrationsForBook\201603091815180_DefaultSchema.resx">
       <DependentUpon>201603091815180_DefaultSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsForEmployee\201603100246131_InitialCreate.resx">
+      <DependentUpon>201603100246131_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603041624186_InitialCreate.resx">
       <DependentUpon>201603041624186_InitialCreate.cs</DependentUpon>
