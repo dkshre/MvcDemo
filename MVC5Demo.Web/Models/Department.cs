@@ -13,6 +13,6 @@ namespace MVC5Demo.Web.Models
         public string Location { get; set; }
 
         // Navigation Property
-        public List<Employee> Employees { get; set; }
+        public virtual List<Employee> Employees { get; set; }
     }
 }

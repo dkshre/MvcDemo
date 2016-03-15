@@ -160,6 +160,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SecretController.cs" />
@@ -179,6 +181,10 @@
     <Compile Include="MigrationsForEmployee\201603100246131_InitialCreate.Designer.cs">
       <DependentUpon>201603100246131_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="MigrationsForEmployee\201603141704388_ForeignkeyAdjustment.cs" />
+    <Compile Include="MigrationsForEmployee\201603141704388_ForeignkeyAdjustment.Designer.cs">
+      <DependentUpon>201603141704388_ForeignkeyAdjustment.cs</DependentUpon>
+    </Compile>
     <Compile Include="MigrationsForEmployee\Configuration.cs" />
     <Compile Include="Migrations\201603041624186_InitialCreate.cs" />
     <Compile Include="Migrations\201603041624186_InitialCreate.Designer.cs">
@@ -191,6 +197,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\CreateEmployeeViewModel.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -260,6 +267,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_CustomLayout.cshtml" />
     <Content Include="Views\Book\Index.cshtml" />
+    <Content Include="Views\Department\Index.cshtml" />
+    <Content Include="Views\Department\Detail.cshtml" />
+    <Content Include="Views\Employee\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -280,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MigrationsForEmployee\201603100246131_InitialCreate.resx">
       <DependentUpon>201603100246131_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MigrationsForEmployee\201603141704388_ForeignkeyAdjustment.resx">
+      <DependentUpon>201603141704388_ForeignkeyAdjustment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603041624186_InitialCreate.resx">
       <DependentUpon>201603041624186_InitialCreate.cs</DependentUpon>
@@ -302,7 +315,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>60314</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
